@@ -100,7 +100,7 @@
         // 查找用户
         const user = allUsers.find(u => u.username === username && u.password === password);
 
-        if (user) {
+          if (user) {
           // 登录成功
           sessionStorage.setItem('salary_logged_in', 'true');
           sessionStorage.setItem('salary_user', JSON.stringify({
@@ -108,7 +108,7 @@
             name: user.name,
             role: user.role
           }));
-          window.location.href = '/';
+          window.location.href = './index.html';
         } else {
           // 登录失败
           errorMsg.textContent = '用户名或密码错误';
